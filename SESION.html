@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>INICIO SESIÓN</title>
+    <meta charset="utf-8">
+<link rel="stylesheet"href="recursos/ESTILOS/margen.CSS">
+<link rel="stylesheet"href="recursos/ESTILOS/header.css">
+<link rel="stylesheet"href="recursos/ESTILOS/barraH.css">
+<link rel="stylesheet"href="recursos/ESTILOS/bienvenida.css">
+<link rel="stylesheet"href="recursos/ESTILOS/parrafo.css">
+<link rel="stylesheet"href="recursos/ESTILOS/footer.css">
+<link rel="stylesheet"href="recursos/ESTILOS/radius.css">
+</head>
+<div class="header"><header>
+  <img src="recursos/img/Banner900_90GVC.png" >
+</header>   
+<nav>
+    <ul id="navmenu">
+    <li><a href="INDEX.HTML">INICIO</a></li> <!--Item principal de menú-->
+    <li><a href="NOSOTROS.html">NOSOTROS</a>
+    <li><a href="Historia.HTML">HISTORIA</a>
+    <li><a href="COMUNIDAD.HTML">COMUNIDAD</a>
+        <ul>
+        <!--SubItem-->
+        <li><a href="ESTUDIANTES.HTML">Estudiantes</a></li>
+        <li><a href="PROFESORES.HTML">Profesores</a></li> 
+        </ul></li>
+        <!--Item principal-->
+    <li><a href="OFERTAEDUCATIVA.HTML">OFERTA EDUCATIVA</a></li> 
+        <li><a href="VINCULACIÓN.HTML">VINCULACIÓN</a>
+        <ul>
+        <li><a href="SERVICIOSOCIAL.HTML">Servicio social</a></li> <!--SubItem-->
+            <li><a href="BECAS.HTML">Becas</a></li>
+        </ul></li>
+        <!--Item principal-->  
+    <li><a href="SESION.html">INICIAR SESION</a></li> 
+    </ul></nav>
+<body>
+    <script>//script que permite mostrar y ocultar Tipo de Cuenta
+		function mostrarCampos() { //inicializar nueva function mostrarCampos
+                //se declara una variable llamada tipoCuenta que hace referencua a los dos radios de nombre tipoCuenta.
+			var tipoCuenta = document.getElementsByName("tipoCuenta"); 
+                //Se declara una variable llamada ctaProfesor y hace refrencia a la etiqueta DIV con la clase ctaProfesor
+			var ctaProfesor = document.getElementById("ctaProfesor");
+                //
+            var ctaEstudiante = document.getElementById("ctaEstudiante")
+
+			if (tipoCuenta[1].checked) {
+				ctaProfesor.style.display = "block";
+                ctaEstudiante.style.display = "none";
+			} else {
+				ctaProfesor.style.display = "none";
+                ctaEstudiante.style.display = "block";
+			}
+        }
+	</script>
+    <h1>Iniciar sesión</h1>
+	<form action="login.php" method="post">
+	<fieldset>
+            <legend class="radio">Tipo de cuenta</legend>
+            <input type="radio" id="cuentaEst" name="tipoCuenta" value="estudiante"  onchange="mostrarCampos()">
+            <label for="cuentaEst">Cuenta de Estudiante</label>
+            <input type="radio" id="cuentaPro" name="tipoCuenta" value="profesor" onchange="mostrarCampos()">
+            <label for="cuentaPro">Cuenta de Profesor</label>
+            <div id="ctaEstudiante" style="display:none;"><br>
+
+		<label for="usernameEst">N° Control</label><br>
+		<input type="text" id="usernameEst" placeholder="&#128272; Usuario" name="usernameEst">
+
+		<label for="passwordEst">Contraseña:</label>
+		<input type="password" id="passwordEst" placeholder="&#128272; Contraseña" name="passwordEst">
+        </div>
+        
+        <div id="ctaProfesor" style="display:none;"><br>
+            <label for="usernamePro">Clave de Empleado:</label><br>
+		<input type="text" id="usernamePro" placeholder="&#128272; Usuario" name="usernamePro">
+
+		<label for="passwordPro">Contraseña:</label>
+		<input type="password" id="passwordPro" placeholder="&#128272; Contraseña" name="passwordPro">
+        </div>
+        <input type="submit" value="Iniciar sesión">
+</fieldset>
+		<p>¿No estas registrado? Clic <a href=".\registro.html">AQUI</a>  </p>
+	</form>
+    
+    </body></div>
+</html>
+
+
+
+
+
+
+
+
+
+
+

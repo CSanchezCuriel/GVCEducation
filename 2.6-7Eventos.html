@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>2.6-2.7 Eventos</title>
+    <script>
+function myFunction() {
+  document.getElementById("ejem").innerHTML = "LA OTRA PALABRA.";
+}
+</script>
+
+<h2>Ejemplo en la Head</h2>
+
+<p id="ejem">CAMBIA LA PALABRA.</p>
+
+<button type="button" onclick="myFunction()">CAMBIAR</button>
+</head>
+<body>
+    <h2>Ejemplo en el Body</h2>
+
+<p id="body">Una palabra en el cuerpo</p>
+
+<button type="button" onclick="laFunction()">Cambia en el cuerpo</button>
+
+<script>
+function laFunction() {
+  document.getElementById("body").innerHTML = "Cambia la palabra en el cuerpo.";
+}
+</script>
+    <hr width=1300>
+    <SECTION>
+<P>Texto en HTML</P>
+<button onclick="document.getElementById('myImage').src='recursos/img/cecybus.jpg'" style="width:200px">CECYBUS</button>
+<img id="myImage" src="recursos/img/logo.png" style="width:250px">
+<button onclick="document.getElementById('myImage').src='recursos/img/paisaje.jpg'" style="width:200px">PAISAJE</button> 
+</SECTION>
+    <hr>
+<SECTION>
+    <article>
+<P>Mostrar un elemento oculto en JS</P>
+<ol><p id="demo" style="display:none">
+
+        Ventajas de JavaScript externo<br>
+Colocar scripts en archivos externos tiene algunas ventajas:
+<li>Separa HTML y código.</li>
+    <li>Hace que HTML y JavaScript sean más fáciles de leer y mantener.</li>
+    <li>Los archivos JavaScript almacenados en caché pueden acelerar la carga de la página</li>
+    <li>Para agregar varios archivos de script a una página, use varias etiquetas de script:</li></p></ol>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Tengo una noticia, da clic aquí</button>
+</article>
+    </SECTION>
+    <hr>
+    <section>
+<h1>ESCRIBE USANDO innerHTML</h1>
+<p>Resultado de la suma</p>
+<p id="inner"></p>
+<script>
+document.getElementById("inner").innerHTML = 5 + 6;
+</script>
+    </section>
+    <hr>
+    <section>
+        <h1>ESCRIBE USANDO document.write</h1>
+<p>Resultado de la suma</p>
+<script>
+document.write(5 + 6);
+</script>
+    </section>
+    <hr>
+    <section>
+    <h1>Escribe con document.write</h1>
+<p>Borra todo el contenido al dar clic en el botón.</p>
+<button type="button" onclick="document.write(5 + 6)">Cambia</button>
+    </section>
+    <hr>
+    <section>
+ <h1>Ventana de alerta </h1>
+<p>Gracias por asistir, te recibimos con los brazos abiertos.</p>
+<p>Me <em>alegro</em> de que no llegues <em>tarde</em>.</p>
+<p>Cuento contigo. <strong>¡No llegues tarde!</strong></p>
+<p>A continuación se muestra una cita en bloque independiente...</p>
+<blockquote
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+    <p>
+    El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+    <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
+    al que delimita es una cita ampliada.
+  </p>
+</blockquote>
+<script>
+window.alert("Bienvenido");
+</script>
+    </section>
+    <hr>
+    <section>
+<h2>Activate Debugging</h2>
+
+<p>F12 on your keyboard will activate debugging.</p>
+<p>Then select "Console" in the debugger menu.</p>
+<p>Then click Run again.</p>
+<script>
+console.log(5 + 6);
+</script>
+</section>
+    <hr>
+    <section>
+        <h1>Metodo de impresión</h1>
+        <p>JavaScript no tiene ningún objeto de impresión o métodos de impresión.
+No puede acceder a los dispositivos de salida desde JavaScript.
+La única excepción es que puede llamar al window.print()método en el navegador para imprimir el contenido de la ventana actual.</p>
+        <button onclick="window.print()">Imprime esta página</button>
+    </section>
+</body>
+</html>
